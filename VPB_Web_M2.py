@@ -63,7 +63,7 @@ with st.form('Constraints/Requirements Input'):
 # ///////////////////////////////
 
 # TD_Rate_Standard = pd.read_excel(r'D:\VPB Hackathon\SampleData2\TD_Rate_Standard.xlsx').set_index('Months_Num')
-TD_Rate_Standard = pd.read_excel('https://github.com/yenlh8/VPB_Hackathon/blob/main/TD_Rate_Standard.xlsx').set_index('Months_Num')
+TD_Rate_Standard = pd.read_excel('https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fyenlh8%2FVPB_Hackathon%2Fmain%2FTD_Rate_Standard.xlsx&wdOrigin=BROWSELINK').set_index('Months_Num')
 
 
 # calc_button = st.button('Click me!')
