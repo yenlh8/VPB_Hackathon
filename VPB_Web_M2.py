@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
-
+import openpyxl
 st.title('Product Package Optimal Pricing')
 
 st.subheader("Customer's Requirements")
