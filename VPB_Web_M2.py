@@ -11,7 +11,9 @@ st.write("Write customer's overall requirements for products here. In case compe
 
 # ///////////
 
-cus_info_table = pd.read_excel(r'D:\VPB Hackathon\SampleData2\Model2_input_data.xlsx').set_index('CusID')
+# cus_info_table = pd.read_excel(r'D:\VPB Hackathon\SampleData2\Model2_input_data.xlsx').set_index('CusID')
+cus_info_table = pd.read_excel(https://github.com/yenlh8/VPB_Hackathon/blob/main/Model2_input_data.xlsx).set_index('CusID')
+
 CusID1, CusName, empty_col = st.columns(3)
 CusID = CusID1.number_input('CusID', value = None, min_value = 9000, max_value = 9999, format = '%d')
 if CusID == None:
