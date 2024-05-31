@@ -257,8 +257,8 @@ if submitted:
 
     dic = { 'Product': ['CASA', 'TD', 'ST'], 'Amount (VNDm)': [round(result.x[0],0), round(result.x[2],0), round(result.x[6],0)],
         'Term (Month)': [round(result.x[1],0), round(result.x[4],0), round(result.x[7])],
-        'Customer Interest Rate': [cus_info_table.loc[CusID, 'CASA_CI'], result.x[3], result.x[5]], 
-        'Profit (VNDm)': [CASA_profit, TD_profit, ST_profit]}
+        'Customer Interest Rate': [round(cus_info_table.loc[CusID, 'CASA_CI'],3), round(result.x[3],3), round(result.x[5],3)], 
+        'Profit (VNDm)': [round(CASA_profit,3), round(TD_profit,3), round(ST_profit,3)]}
 
     Result_Table = pd.DataFrame(dic)
 
@@ -297,8 +297,8 @@ if submitted:
 
     # st.write(TD_Rate_Standard.loc[min(mylist, key=lambda x:abs(x-TD_term_result)), 'TD_CI'])
     dic_cus = {'Product': ['CASA', 'TD', 'ST'],
-                'Customer Interest Rate Proposed': [cus_info_table.loc[CusID, 'CASA_CI'], result.x[3], result.x[5]],
-                    'Customer Interest Rate Standard/Competitor':[cus_info_table.loc[CusID, 'CASA_CI'], TD_Rate_Standard.loc[min(mylist, key=lambda x:abs(x-TD_term_result)), 'TD_CI'], Competitor_ST_CI]} 
+                'Customer Interest Rate Proposed': [round(cus_info_table.loc[CusID, 'CASA_CI'],3), round(result.x[3],3), round(result.x[5],3)],
+                    'Customer Interest Rate Standard/Competitor':[round(cus_info_table.loc[CusID, 'CASA_CI'],3), round(TD_Rate_Standard.loc[min(mylist, key=lambda x:abs(x-TD_term_result)), 'TD_CI'],3), round(Competitor_ST_CI,3)]} 
 
 
         # st.markdown(''':violet[Compare Customer Benefits] ''')
